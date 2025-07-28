@@ -20,13 +20,13 @@ You can either copy it straight into your `config.yml` file, or add flags to laz
 
 **If you want to merge with your own config:**
 
-1. Choose the theme you want (from `./themes`)
+1. Choose the variant you want (from `./themes`)
 2. Replace the `theme` section of `<config-dir>/config.yml` with the theme you want to use.
 3. Close and re-open lazygit to see your new theme!
 
 **If you want to use our preset:**
 
-1. Choose the flavor you want (from `./themes`)
+1. Choose the variant you want (from `./themes`)
 2. Copy your chosen theme file into `<config-dir>/lazygit`
 3. Change your lazygit startup command (you may want to set a shell alias) to the following:
 
@@ -46,7 +46,46 @@ You can either copy it straight into your `config.yml` file, or add flags to laz
 
 **Rosé Pine**
 ![rose-pine](https://github.com/user-attachments/assets/5d39e315-17be-4ee9-9a5d-8d2bb5f5bb82)
+
 **Rosé Pine Moon**
 ![rose-pine-moon](https://github.com/user-attachments/assets/e4d7046d-a24d-4a11-9144-fc10f8db067f)
+
 **Rosé Pine Dawn**
 ![rose-pine-dawn](https://github.com/user-attachments/assets/dff0138e-7535-49f0-960c-02a55ad628f5)
+> **Note**: The screenshots showcase lazygit with [delta](https://github.com/dandavison/delta) pager using the `mellow-barbet` color theme and `rose-pine` syntax highlighting.
+
+<details>
+<summary>Replicating the screenshot look</summary>
+
+### Prerequisites
+
+- Install [delta](https://dandavison.github.io/delta/installation.html)  
+- (Optional) Clone [delta](https://github.com/dandavison/delta) repository or download the raw `themes.gitconfig` file for additional themes
+
+### Configuration
+
+1. Add delta themes to git (optional):
+
+    ```
+    # ~/.gitconfig
+    [include]
+        path = /PATH/TO/delta/themes.gitconfig
+    ```
+
+2. Configure lazygit to use delta:
+
+    ```yml
+    # ~/.config/lazygit/config.yml
+    git:
+        paging:
+            colorArg: always
+            pager: delta --paging=never --features="mellow-barbet" --syntax-theme="rose-pine"
+            useConfig: false
+    ```
+
+### Available themes
+
+- Run `delta --show-themes` to browse color themes
+- Run `delta --show-syntax-themes` to browse syntax themes
+
+</details>
