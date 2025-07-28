@@ -1,6 +1,6 @@
 <p align="center">
     <img src="https://github.com/rose-pine/rose-pine-theme/raw/main/assets/icon.png" width="80" />
-    <h2 align="center">Rosé Pine for App</h2>
+    <h2 align="center">Rosé Pine for lazygit</h2>
 </p>
 
 <p align="center">All natural pine, faux fur and a bit of soho vibes for the classy minimalist</p>
@@ -13,35 +13,40 @@
 
 ## Usage
 
-1. Open App
-2. Under settings, import `rose-pine.theme`
-3. Select `Rosé Pine` from the themes dropdown
+1. Clone this repository locally
+2. Ensure the config directory exists. If it doesn't, you can run lazygit to launch and setup the directory.
+
+You can either copy it straight into your `config.yml` file, or add flags to lazygit which will merge it from the presets.
+
+**If you want to merge with your own config:**
+
+1. Choose the theme you want (from `./themes`)
+2. Replace the `theme` section of `<config-dir>/config.yml` with the theme you want to use.
+3. Close and re-open lazygit to see your new theme!
+
+**If you want to use our preset:**
+
+1. Choose the flavor you want (from `./themes`)
+2. Copy your chosen theme file into `<config-dir>/lazygit`
+3. Change your lazygit startup command (you may want to set a shell alias) to the following:
+
+    ```
+    # This will instruct lazygit to open both config files, merge them, and then boot.
+    # You can add more config files, delimited by a comma, to this list
+
+    # Replacing <your-theme> with the relevant theme file
+    lazygit --use-config-file="<config-dir>/config.yml,<your-theme>.yml"
+    # or
+    LG_CONFIG_FILE="<config-dir>/config.yml,<your-theme>.yml" lazygit
+    ```
+
+4. Close and re-open lazygit to see your new theme!
 
 ## Gallery
 
-![Rosé Pine with App](https://user-images.githubusercontent.com/1474821/166155319-06796439-95a7-4aea-910e-927c1f24518e.png)
-
-## Thanks to
-
-- [You, it's you!](https://github.com/<username>)
-
-## Contributing
-
-> Prefer using [@rose-pine/build](https://github.com/rose-pine/build) when possible
-
-Modify `template.json` using Rosé Pine variables, then build variants:
-
-```sh
-npx @rose-pine/build@latest
-```
-
-## Style guide
-
-> Be sure to remove this section 😌
-
-- Lowercase meta files, eg. `readme.md`
-- Repo name should be the simplest version of the app name, eg. iterm instead of iTerm2
-- Add a description and topics to automatically show the theme on [rosepinetheme.com/themes](https://rosepinetheme.com/themes)
-    - Description should read "Soho vibes for App" where "App" is the display name
-    - Topics should include [existing categories](https://rosepinetheme.com/themes)
-    - Generate and upload social image via [Rosé Pine Images](https://rose-pine-images.vercel.app)
+**Rosé Pine**
+![rose-pine](https://github.com/user-attachments/assets/5d39e315-17be-4ee9-9a5d-8d2bb5f5bb82)
+**Rosé Pine Moon**
+![rose-pine-moon](https://github.com/user-attachments/assets/e4d7046d-a24d-4a11-9144-fc10f8db067f)
+**Rosé Pine Dawn**
+![rose-pine-dawn](https://github.com/user-attachments/assets/dff0138e-7535-49f0-960c-02a55ad628f5)
